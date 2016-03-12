@@ -3,8 +3,6 @@ require "spec_helper"
 describe Person do
   describe "#without_remote_manager" do
     it "returns people who have no manager or whose manager is local" do
-      pending "Implement without_remote_manager to make this spec pass"
-
       local = create(:location)
       remote = create(:location)
       local_manager = create(
@@ -96,11 +94,6 @@ describe Person do
 
   describe ".with_employees.with_local_coworkers.order_by_location_name" do
     it "combines scopes" do
-      pending(<<-TEXT)
-
-        Rewrite with_employees and with_local_coworkers to make this spec pass.
-      TEXT
-
       locations = [
         create(:location, name: "location1"),
         create(:location, name: "location3"),
